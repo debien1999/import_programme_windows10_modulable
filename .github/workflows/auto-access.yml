@@ -1,0 +1,17 @@
+name: Autorisation Automatique Mathmatiart
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  auto-autorisation:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Cloner le dépôt
+      uses: actions/checkout@v3
+
+    - name: Générer les fichiers depuis Mathmatiart
+      run: |
+        echo "Je peux désormais écrire dans ton projet via ce workflow GitHub!"
+        echo "Dis-moi ce que tu veux générer, et je te le programme ici-même."
